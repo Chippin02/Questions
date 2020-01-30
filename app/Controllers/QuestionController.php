@@ -18,7 +18,7 @@ class QuestionController {
 
     public static function get_questions_with_user() {
 
-        return Question::with('User') -> get() -> toArray();
+        return Question::with('user') -> get() -> toArray();
         //return Question::with('User') -> get() -> toJson();
 
     }

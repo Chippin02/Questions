@@ -4,7 +4,7 @@
 namespace Q\Models;
 
 use Illuminate\Database\Eloquent\Model as Eloquent;
-use Q\Models\User;
+use Q\Models\User as User;
 
 class Question extends Eloquent {
 
@@ -13,7 +13,7 @@ class Question extends Eloquent {
 
     public function user() {
 
-        return $this -> belongsTo('User');
+        return $this -> belongsTo('Q\Models\User');
         //return $this -> belongsTo('Q\Models\User');
 
     }

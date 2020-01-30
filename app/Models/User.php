@@ -4,7 +4,7 @@
 namespace Q\Models;
 
 use Illuminate\Database\Eloquent\Model as Eloquent;
-use Q\Models\Question;
+use Q\Models\Question as Question;
 
 class User extends Eloquent {
 
@@ -13,7 +13,7 @@ class User extends Eloquent {
 
     public function questions() {
 
-        return $this -> hasMany('Question');
+        return $this -> hasMany('Q\Models\Question');
         //return $this -> hasMany('Q\Models\Question'); La entidad con la que está relacionada
         //solo funciona si tiene incluida una clave foránea
 
