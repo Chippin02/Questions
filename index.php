@@ -23,3 +23,11 @@
     }
 
     print_r(QuestionController::get_questions_with_user());
+
+    echo "Preguntes del usuario 2<br>";
+    //acceso hasmany() buscando por índice
+    $questions = User::find(2) -> questions;
+    foreach ($questions as $question) {
+        //acceso a propiedad question de questions
+        echo $question -> question.'<br>';
+    }
